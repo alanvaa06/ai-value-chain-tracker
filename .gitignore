@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Generated research outputs / state (kept private — produced at runtime, stored in Drive)
+weekly/
+out/
+*.output
+ai_value_chain_baseline_*.json
+ai_value_chain_report_*.md
+weekly_report_*.md
+ai_weekly_payload_*.json
+_weekly_args.json
+
+# OS
+.DS_Store
+Thumbs.db
