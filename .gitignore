@@ -11,6 +11,9 @@ ai_value_chain_report_*.md
 weekly_report_*.md
 ai_weekly_payload_*.json
 _weekly_args.json
+weekly_args.json
+prior_baseline.json
+wf_output.json
 
 # OS
 .DS_Store

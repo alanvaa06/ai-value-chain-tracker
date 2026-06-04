@@ -121,6 +121,7 @@ workflows/
   ai_value_chain_baseline.js    # one-time baseline (map → adversarial deep-dive → score)
   ai_value_chain_weekly.js      # weekly discovery + anchored scoring (EMBEDDED = example stub)
 builders/
+  prepare_weekly.js             # prior baseline → run args + injects state into the weekly workflow
   build_baseline_report.js      # baseline workflow output → ranked JSON + markdown report
   build_weekly_report.js        # weekly workflow output → diff report + updated baseline + n8n payload
 prompts/
