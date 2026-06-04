@@ -129,17 +129,65 @@ prompts/
   weekly_prompt.md              # the ultracode prompt for the weekly routine
 ```
 
-## ▶️ Running
+## 🏁 Getting started
 
-Workflows run inside **Claude Code** via the `Workflow` tool (multi-agent orchestration). The builders are plain **Node.js**:
+**Prerequisites**
+- [Claude Code](https://claude.com/claude-code) — the workflows use its multi-agent `Workflow` tool and web search.
+- [Node.js](https://nodejs.org) — the builders are plain Node, no dependencies.
+- *(optional, for automation)* Google Drive + n8n connectors.
 
 ```bash
-# weekly: merge a workflow run into the prior baseline and render the diff
-node builders/build_weekly_report.js \
-  prior_baseline.json  workflow_output.json  ./out  2026-06-03  3
+git clone https://github.com/alanvaa06/ai-value-chain-tracker
+cd ai-value-chain-tracker
 ```
 
-The weekly script ships with a small **example stub** in `EMBEDDED` (placeholder tickers). In production the routine passes real state via `args` or reads the latest baseline from Google Drive — the stub is never used live.
+### Step 1 · Build the baseline (one-time)
+
+Pick one:
+
+- **Easiest — paste the prompt.** Open Claude Code in this repo and paste the contents of [`prompts/baseline_prompt.md`](prompts/baseline_prompt.md). The `ultracode` keyword makes Claude orchestrate the workflow: it maps all 11 layers in parallel, builds the universe, runs the adversarial deep-dive (Data → News → Bull → Bear), and scores every shortlisted name.
+- **Direct — run the committed script.** Invoke the `Workflow` tool on [`workflows/ai_value_chain_baseline.js`](workflows/ai_value_chain_baseline.js), then save its returned result to `baseline_output.json`.
+
+Render the ranked report + machine-readable baseline:
+
+```bash
+node builders/build_baseline_report.js  baseline_output.json  ./out  2026-06-03
+# → ./out/ai_value_chain_baseline.json   (the universe + scores)
+# → ./out/AI_Value_Chain_Report.md       (the human report)
+```
+
+> 🎚️ **Tune the rubric** by editing the `WEIGHTS` object in `builders/build_baseline_report.js`, then re-run the builder — re-ranking is instant and needs **no** new workflow run (the seven sub-scores are stored per name).
+
+### Step 2 · Seed your store
+
+The weekly diff reads the *latest* baseline, so date the file. If automating via Google Drive, upload to your folder renamed with the run date:
+
+```
+ai_value_chain_baseline_2026-06-03.json
+ai_value_chain_report_2026-06-03.md
+```
+
+## 🔁 Weekly diff (recurring)
+
+Each run reads the latest dated baseline, discovers only what changed in the trailing window, scores it, and writes a **new** dated baseline (so next week diffs against it). Manual run:
+
+```bash
+# 1 · inject the prior baseline into the workflow + set the 7-day window
+node builders/prepare_weekly.js  prior_baseline.json  2026-06-10
+
+# 2 · run workflows/ai_value_chain_weekly.js via Claude Code's Workflow tool,
+#     then save its returned result to wf_output.json
+
+# 3 · merge, diff, render
+node builders/build_weekly_report.js  prior_baseline.json  wf_output.json  ./out  2026-06-10  3
+# → ./out/ai_value_chain_baseline_2026-06-10.json
+# → ./out/weekly_report_2026-06-10.md
+# → ./out/ai_weekly_payload_2026-06-10.json   (the n8n body)
+```
+
+For a hands-off weekly, deploy it as a scheduled **Claude Code routine** — see [Deploy as a weekly routine](#-deploy-as-a-weekly-routine) and [`prompts/weekly_prompt.md`](prompts/weekly_prompt.md).
+
+> The weekly script ships with a tiny **example stub** in its `EMBEDDED` constant (placeholder tickers). `prepare_weekly.js` overwrites it with your real prior state at run time — the stub is never used live.
 
 ## 📤 Outputs
 
