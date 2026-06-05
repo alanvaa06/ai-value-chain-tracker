@@ -174,7 +174,8 @@ md.push('---');
 md.push(`*Updated baseline written: ai_value_chain_baseline_${ASOF}.json (${uniCount} companies, ${rankedArr.length} ranked).*`);
 md.push('');
 const reportMarkdown = md.join('\n');
-fs.writeFileSync(`${OUT}\\weekly_report_${ASOF}.md`, reportMarkdown, 'utf8');
+const stateBlock = '\n\n<!--AIVC_STATE\n' + JSON.stringify(updatedBaseline) + '\nAIVC_STATE-->\n';
+fs.writeFileSync(`${OUT}\\weekly_report_${ASOF}.md`, reportMarkdown + stateBlock, 'utf8');
 
 // ---- n8n payload ----
 const topRanking = rankedArr.slice(0, 20).map(e => ({ rank: e.rank, ticker: e.ticker, layerNumber: e.layerNumber, compositeScore: e.compositeScore, returnPotential: e.returnPotential, verdict: e.verdict }));

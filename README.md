@@ -135,23 +135,27 @@ ai_value_chain_report_2026-06-03.md
 
 ## Weekly diff (recurring)
 
-Each run reads the latest dated baseline, discovers only what changed in the trailing window, scores it, and writes a new dated baseline so the next run diffs against it. Manual run:
+Each run reads the latest report, discovers only what changed in the trailing window, scores it, and writes a new report so the next run diffs against it. Manual run:
 
 ```bash
-# 1. inject the prior baseline into the workflow and set the 7-day window
+# 1. extract the prior state embedded in the latest report markdown
+node builders/extract_state.js  latest_report.md  prior_baseline.json
+
+# 2. inject the prior state into the workflow and set the 7-day window
 node builders/prepare_weekly.js  prior_baseline.json  2026-06-10
 
-# 2. run workflows/ai_value_chain_weekly.js via Claude Code's Workflow tool,
+# 3. run workflows/ai_value_chain_weekly.js via Claude Code's Workflow tool,
 #    then save its returned result to wf_output.json
 
-# 3. merge, diff, render
+# 4. merge, diff, render
 node builders/build_weekly_report.js  prior_baseline.json  wf_output.json  ./out  2026-06-10  3
-# -> ./out/ai_value_chain_baseline_2026-06-10.json
-# -> ./out/weekly_report_2026-06-10.md
+# -> ./out/weekly_report_2026-06-10.md         (the report, with embedded state)
 # -> ./out/ai_weekly_payload_2026-06-10.json   (the n8n body)
 ```
 
 For a hands-off weekly, deploy it as a scheduled Claude Code routine. See [Deploy as a weekly routine](#deploy-as-a-weekly-routine) and [`prompts/weekly_prompt.md`](prompts/weekly_prompt.md).
+
+State lives inside the report. Each report ends with a hidden `<!--AIVC_STATE ... -->` HTML comment holding the structured universe, sub-scores, ranks and weights — invisible when rendered. Google Drive therefore stores only markdown files; `extract_state.js` reads the block back for the next diff. The original baseline report is read once, then superseded by newer dated reports.
 
 The weekly script ships with a small example stub in its `EMBEDDED` constant (placeholder tickers). `prepare_weekly.js` overwrites it with the real prior state at run time; the stub is never used live.
 
@@ -183,9 +187,10 @@ workflows/
   ai_value_chain_baseline.js    # one-time baseline (map -> adversarial deep-dive -> score)
   ai_value_chain_weekly.js      # weekly discovery + anchored scoring (EMBEDDED = example stub)
 builders/
-  prepare_weekly.js             # prior baseline -> run args + injects state into the weekly workflow
-  build_baseline_report.js      # baseline workflow output -> ranked JSON + markdown report
-  build_weekly_report.js        # weekly workflow output -> diff report + updated baseline + n8n payload
+  extract_state.js              # pull embedded state (AIVC_STATE block) out of the latest report markdown
+  prepare_weekly.js             # prior state -> run args + injects it into the weekly workflow
+  build_baseline_report.js      # baseline workflow output -> ranked report (with embedded state)
+  build_weekly_report.js        # weekly workflow output -> diff report (with embedded state) + n8n payload
 prompts/
   baseline_prompt.md            # the ultracode prompt that builds the baseline
   weekly_prompt.md              # the ultracode prompt for the weekly routine
