@@ -1,6 +1,7 @@
 // Transforms workflow output JSON into (1) baseline universe JSON and (2) a finished, ranked markdown report.
 const fs = require('fs');
 
+const path = require('path');
 const SRC = process.argv[2];
 const OUT_DIR = process.argv[3];
 const STAMP = process.argv[4] || null;
@@ -99,7 +100,7 @@ const baseline = {
   })),
   layers: baseLayers, survivors, dropped,
 };
-fs.writeFileSync(OUT_DIR + '\\ai_value_chain_baseline.json', JSON.stringify(baseline, null, 2), 'utf8');
+fs.writeFileSync(path.join(OUT_DIR, 'ai_value_chain_baseline.json'), JSON.stringify(baseline, null, 2), 'utf8');
 
 // ---- MARKDOWN ----
 const md = [];
@@ -258,7 +259,7 @@ md.push(`*Persisted: \`ai_value_chain_baseline.json\` (${uni} companies, ${ranke
 md.push('');
 
 const stateBlock = '\n\n<!--AIVC_STATE\n' + JSON.stringify(baseline) + '\nAIVC_STATE-->\n';
-fs.writeFileSync(OUT_DIR + '\\AI_Value_Chain_Report.md', md.join('\n') + stateBlock, 'utf8');
+fs.writeFileSync(path.join(OUT_DIR, 'AI_Value_Chain_Report.md'), md.join('\n') + stateBlock, 'utf8');
 
 // console
 console.log('Universe:', uni, '| Scored:', ranked.length, '| Survivors:', survivors.length, '| Dropped:', dropped.length);
