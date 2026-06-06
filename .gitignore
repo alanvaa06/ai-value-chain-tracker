@@ -3,6 +3,7 @@ node_modules/
 npm-debug.log*
 
 # Generated research outputs / state (kept private — produced at runtime, stored in Drive)
+latest_report.md
 weekly/
 out/
 *.output
