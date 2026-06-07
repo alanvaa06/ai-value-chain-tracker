@@ -98,7 +98,7 @@ const updatedBaseline = {
     compositeScore: e.compositeScore ?? null, returnPotential: e.returnPotential || null, verdict: e.verdict, conviction: e.conviction, survives: e.survives !== false, scores: e.scores || null })),
   layers: upLayers, survivors: rankedArr.filter(e => e.survives !== false).map(e => e.ticker), dropped: rankedArr.filter(e => e.survives === false).map(e => e.ticker),
 };
-fs.writeFileSync(`${OUT}\\ai_value_chain_baseline_${ASOF}.json`, JSON.stringify(updatedBaseline, null, 2), 'utf8');
+fs.writeFileSync(`${OUT}/ai_value_chain_baseline_${ASOF}.json`, JSON.stringify(updatedBaseline, null, 2), 'utf8');
 
 // ---- weekly report markdown ----
 const dryLayers = disc.filter(d => d.dry || ((d.newNames||[]).length===0 && (d.existingUpdates||[]).length===0)).map(d => d.layerNumber);
@@ -175,7 +175,7 @@ md.push(`*Updated baseline written: ai_value_chain_baseline_${ASOF}.json (${uniC
 md.push('');
 const reportMarkdown = md.join('\n');
 const stateBlock = '\n\n<!--AIVC_STATE\n' + JSON.stringify(updatedBaseline) + '\nAIVC_STATE-->\n';
-fs.writeFileSync(`${OUT}\\weekly_report_${ASOF}.md`, reportMarkdown + stateBlock, 'utf8');
+fs.writeFileSync(`${OUT}/weekly_report_${ASOF}.md`, reportMarkdown + stateBlock, 'utf8');
 
 // ---- n8n payload ----
 const topRanking = rankedArr.slice(0, 20).map(e => ({ rank: e.rank, ticker: e.ticker, layerNumber: e.layerNumber, compositeScore: e.compositeScore, returnPotential: e.returnPotential, verdict: e.verdict }));
@@ -190,7 +190,7 @@ const payload = {
   drops, topRanking, reportMarkdown,
   driveFiles: [`ai_value_chain_baseline_${ASOF}.json`, `weekly_report_${ASOF}.md`],
 };
-fs.writeFileSync(`${OUT}\\ai_weekly_payload_${ASOF}.json`, JSON.stringify(payload, null, 2), 'utf8');
+fs.writeFileSync(`${OUT}/ai_weekly_payload_${ASOF}.json`, JSON.stringify(payload, null, 2), 'utf8');
 
 // console
 console.log(`Additions: ${additions.length} | Changes: ${changes.length} | Newly-scored: ${newlyScored.length} | Follow-ups: ${followups.length} | Dry layers: ${dryLayers.length}`);
