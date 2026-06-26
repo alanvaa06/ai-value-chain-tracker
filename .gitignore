@@ -15,6 +15,16 @@ weekly_args.json
 prior_baseline.json
 wf_output.json
 
+# Runtime session artifacts (downloaded Drive reports, intermediate extractions)
+latest_report.md
+june12_baseline.json
+june*_baseline.json
+
+# Backslash-prefixed output files created by builder on Linux (path sep issue)
+out\\ai_value_chain_baseline_*.json
+out\\ai_weekly_payload_*.json
+out\\weekly_report_*.md
+
 # OS
 .DS_Store
 Thumbs.db
