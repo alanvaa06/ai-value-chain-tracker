@@ -176,7 +176,13 @@ md.push('---');
 md.push(`*Updated baseline written: ai_value_chain_baseline_${ASOF}.json (${uniCount} companies, ${rankedArr.length} ranked).*`);
 md.push('');
 const reportMarkdown = md.join('\n');
-const stateBlock = '\n\n<!--AIVC_STATE\n' + JSON.stringify(updatedBaseline) + '\nAIVC_STATE-->\n';
+// The embedded state only needs to round-trip through prepare_weekly.js, which reads `ranking` for
+// scores and only `.ticker` from each layer's companies (see existingTickers derivation) — so the
+// per-company score/verdict/thesis detail duplicated into `layers` (already carried by `ranking`)
+// is dropped here to keep the Drive-uploaded file a manageable size. Full detail still lives in the
+// local ai_value_chain_baseline_<ASOF>.json.
+const slimBaseline = { ...updatedBaseline, layers: upLayers.map(L => ({ layerNumber: L.layerNumber, layer: L.layer, companies: L.companies.map(c => ({ ticker: c.ticker })) })) };
+const stateBlock = '\n\n<!--AIVC_STATE\n' + JSON.stringify(slimBaseline) + '\nAIVC_STATE-->\n';
 fs.writeFileSync(path.join(OUT, `weekly_report_${ASOF}.md`), reportMarkdown + stateBlock, 'utf8');
 
 // ---- n8n payload ----
