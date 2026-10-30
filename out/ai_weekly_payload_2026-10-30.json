@@ -1,0 +1,380 @@
+{
+  "weekEnding": "2026-10-30",
+  "asOfDate": "2026-10-30",
+  "priorBaselineDate": "2026-10-23",
+  "scoringWeights": {
+    "aiExposure": 22,
+    "growth": 24,
+    "moat": 10,
+    "valuation": 8,
+    "catalyst": 12,
+    "momentum": 18,
+    "riskAdj": 6
+  },
+  "subject": "AI Value Chain weekly — 2026-10-30: 1 new, 10 changed",
+  "summary": "1 additions (AIXA); 10 changes; 0 newly-scored; 2 follow-ups.",
+  "additions": [
+    {
+      "ticker": "AIXA",
+      "layerNumber": 3,
+      "rank": 105,
+      "compositeScore": 58,
+      "verdict": "fairly valued",
+      "returnPotential": "medium",
+      "linkage": "Its MOCVD tools make the InP/GaAs laser epi wafers behind EML/VCSEL transceivers in AI data-center optical interconnects. Q3 order intake of about EUR275m (vs EUR124m a year earlier, consensus EUR214.6m) was attributed by management to laser equipment for AI data-center communications."
+    }
+  ],
+  "changes": [
+    {
+      "ticker": "NOW",
+      "layerNumber": 11,
+      "before": {
+        "composite": 82.6,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 12
+      },
+      "after": {
+        "composite": 84.8,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 7
+      },
+      "driver": "Q3 beat on all metrics, AI ACV target raised to $1.7B (from $1B at start of year), FCF margin to 36%, capex cut: confirms AI monetization is real and accelerating inside the enterprise workflow base."
+    },
+    {
+      "ticker": "005930.KS",
+      "layerNumber": 5,
+      "before": {
+        "composite": 83.8,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 7
+      },
+      "after": {
+        "composite": 82,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 12
+      },
+      "driver": "Q3 chip profit reportedly ~0.22T won (about 0.2%) under consensus on a record 107.4T won total OP; HBM4E NVIDIA qualification is unverified, and the ~5% SNDK/MU dip reads as sentiment, not fundamentals."
+    },
+    {
+      "ticker": "AMZN",
+      "layerNumber": 8,
+      "before": {
+        "composite": 78.8,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 25
+      },
+      "after": {
+        "composite": 81.8,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 13
+      },
+      "driver": "AWS +39.3% y/y (6th straight acceleration), backlog $578B vs $496B, >40% growth guided for 2027-28, but 2026 capex ~$220B rising in 2027 and EPS missed; read-through is strong demand for cloud and compute capacity, with FCF and margin pressure from the capex burden."
+    },
+    {
+      "ticker": "GEV",
+      "layerNumber": 1,
+      "before": {
+        "composite": 78.8,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 24
+      },
+      "after": {
+        "composite": 80.6,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 19
+      },
+      "driver": "Q3'26: orders ~$29.3B (+96% organic), backlog $197B heading above $200B, FY26 guide raised (rev ~$46.5-47.5B, FCF ~$16-17B), plus ~$9.0B Trench Group deal; read-through is more visible multi-year grid and gas-turbine demand from AI power needs, but the stock already prices much of it."
+    },
+    {
+      "ticker": "VRT",
+      "layerNumber": 2,
+      "before": {
+        "composite": 75,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 45
+      },
+      "after": {
+        "composite": 79.2,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 26
+      },
+      "driver": "Q3 2026: sales $4.313B (+61%, +55% organic), adj EPS $2.21 (+78%), organic orders >100%, FY26 guide raised $650M to $14.65B midpoint and EPS to $7.15; read-through is accelerating datacenter power/cooling demand and a strengthening backlog."
+    },
+    {
+      "ticker": "MSFT",
+      "layerNumber": 8,
+      "before": {
+        "composite": 75.8,
+        "verdict": "underappreciated",
+        "returnPotential": "medium",
+        "rank": 40
+      },
+      "after": {
+        "composite": 78,
+        "verdict": "underappreciated",
+        "returnPotential": "medium",
+        "rank": 32
+      },
+      "driver": "FQ1'27 Azure +48% y/y ($33.2B) beat ~45% expectations with +49-50% cc guide; capex ~$6B below forecast on GPU supply delays, set to rise in 1H27, so demand exceeds supply and the capex delay is timing, not weaker demand (full-year ~$170B trim is single-source, unverified)."
+    },
+    {
+      "ticker": "GOOGL",
+      "layerNumber": 9,
+      "before": {
+        "composite": 74.6,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 50
+      },
+      "after": {
+        "composite": 77.4,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 37
+      },
+      "driver": "Q3 Cloud $30.7B (+103% y/y), total revenue $127.6B (+25%), Cloud margin about 36% per secondary sources; the market punished the reported 2027 capex above $300B (stock about -10%), so the read-through is strong AI demand for TPUs and Gemini against heavier capex and FCF risk."
+    },
+    {
+      "ticker": "KLAC",
+      "layerNumber": 3,
+      "before": {
+        "composite": 75.8,
+        "verdict": "priced-in",
+        "returnPotential": "medium",
+        "rank": 39
+      },
+      "after": {
+        "composite": 75.8,
+        "verdict": "priced-in",
+        "returnPotential": "medium",
+        "rank": 42
+      },
+      "driver": "FQ1'27 beat (rev $4.14B vs $4.0B mid, non-GAAP EPS $1.22 vs $1.16, FCF $1.34B) with CEO citing 2H CY26 acceleration; confirms process-control demand but Dec-qtr guide not retrieved, so no re-rating."
+    },
+    {
+      "ticker": "SNDK",
+      "layerNumber": 5,
+      "before": {
+        "composite": 73,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 55
+      },
+      "after": {
+        "composite": 71.2,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 64
+      },
+      "driver": "FQ1'27 reported after close 10/29 (guide rev $10.3-10.8B, EPS $44-46); actuals not confirmed in searches, shares slid ~5% pre-print on the Samsung miss, and the repeated pattern of beat-then-sell-off after hours suggests expectations are stretched. Check the actual print and FQ2 guide next."
+    },
+    {
+      "ticker": "STX",
+      "layerNumber": 5,
+      "before": {
+        "composite": 68.8,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 71
+      },
+      "after": {
+        "composite": 71.2,
+        "verdict": "fairly valued",
+        "returnPotential": "medium",
+        "rank": 65
+      },
+      "driver": "FQ1'27 beat (rev $4.23B, adj EPS $7.68 vs ~$7.40, GM 57.8%) with FQ2 guide $4.8B/EPS $9.20 above consensus; shares slipped, so strong HAMR/Mozaic operating leverage is already largely priced in."
+    }
+  ],
+  "newlyScored": [],
+  "followups": [
+    {
+      "ticker": "PWR",
+      "note": "Q3 2026 revenue $12.01B vs $7.63B (+57%) and adj EPS $6.06 vs $3.33 (+82%), citing utility and data-center demand plus acquisitions; backlog and guidance not verified (sec.gov blocked), so read-through is a confirmation of strong utility and data-center buildout demand, not a regime change.",
+      "url": null
+    },
+    {
+      "ticker": "000660.KS",
+      "note": "Q3 2026 confirmed: revenue ~104.6T won, op profit ~83.3T (~80% margin, beat ~77T), DRAM/HBM booked through 2029 via LTAs with 14 customers, ~100T won payout; read-through is multi-year visibility, but net profit missed (~39.8T) and peak-margin risk rises.",
+      "url": null
+    }
+  ],
+  "drops": [],
+  "topRanking": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "layerNumber": 5,
+      "compositeScore": 94.6,
+      "returnPotential": "high",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 2,
+      "ticker": "000660.KS",
+      "layerNumber": 5,
+      "compositeScore": 90,
+      "returnPotential": "high",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 3,
+      "ticker": "DLR",
+      "layerNumber": 8,
+      "compositeScore": 89.2,
+      "returnPotential": "medium",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 4,
+      "ticker": "AVGO",
+      "layerNumber": 4,
+      "compositeScore": 89,
+      "returnPotential": "medium",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 5,
+      "ticker": "NVDA",
+      "layerNumber": 4,
+      "compositeScore": 88.8,
+      "returnPotential": "high",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 6,
+      "ticker": "TSM",
+      "layerNumber": 3,
+      "compositeScore": 88.6,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 7,
+      "ticker": "NOW",
+      "layerNumber": 11,
+      "compositeScore": 84.8,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 8,
+      "ticker": "AMD",
+      "layerNumber": 4,
+      "compositeScore": 83.2,
+      "returnPotential": "high",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 9,
+      "ticker": "AMAT",
+      "layerNumber": 3,
+      "compositeScore": 83,
+      "returnPotential": "medium",
+      "verdict": "priced-in"
+    },
+    {
+      "rank": 10,
+      "ticker": "CEG",
+      "layerNumber": 1,
+      "compositeScore": 83,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 11,
+      "ticker": "TER",
+      "layerNumber": 3,
+      "compositeScore": 82.6,
+      "returnPotential": "high",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 12,
+      "ticker": "005930",
+      "layerNumber": 5,
+      "compositeScore": 82,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 13,
+      "ticker": "AMZN",
+      "layerNumber": 9,
+      "compositeScore": 81.8,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 14,
+      "ticker": "LITE",
+      "layerNumber": 6,
+      "compositeScore": 81.3,
+      "returnPotential": "high",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 15,
+      "ticker": "APH",
+      "layerNumber": 6,
+      "compositeScore": 80.8,
+      "returnPotential": "medium",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 16,
+      "ticker": "MRVL",
+      "layerNumber": 4,
+      "compositeScore": 80.8,
+      "returnPotential": "low",
+      "verdict": "priced-in"
+    },
+    {
+      "rank": 17,
+      "ticker": "ANET",
+      "layerNumber": 6,
+      "compositeScore": 80.6,
+      "returnPotential": "high",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 18,
+      "ticker": "DINF",
+      "layerNumber": 10,
+      "compositeScore": 80.6,
+      "returnPotential": "high",
+      "verdict": "underappreciated"
+    },
+    {
+      "rank": 19,
+      "ticker": "GEV",
+      "layerNumber": 1,
+      "compositeScore": 80.6,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    },
+    {
+      "rank": 20,
+      "ticker": "ALAB",
+      "layerNumber": 6,
+      "compositeScore": 80.4,
+      "returnPotential": "medium",
+      "verdict": "fairly valued"
+    }
+  ],
+  "reportMarkdown": "# AI Value Chain — Weekly Diff · week ending 2026-10-30\n\n*As-of 2026-10-30 · window 2026-10-23 → 2026-10-30 · vs prior baseline 2026-10-23*\n\n**This week:** 1 new name, 10 scored changes, 0 newly-scored universe names, 2 follow-ups. Biggest move: VRT 75→79.2. New: AIXA.\n\n## Additions — new names entering the universe\n\n### #105 · AIXA · XETRA (Frankfurt) — AIXTRON SE · score 58/100 (Tier D) · L3 Semiconductor Manufacturing Enablers\n*fairly valued · return 🟡 med · scores 6/6/5/4/6/7/4 (Exp/Grw/Moat/Val/Cat/Mom/Rsk)*\n\n- **AI-infra linkage:** Its MOCVD tools make the InP/GaAs laser epi wafers behind EML/VCSEL transceivers in AI data-center optical interconnects. Q3 order intake of about EUR275m (vs EUR124m a year earlier, consensus EUR214.6m) was attributed by management to laser equipment for AI data-center communications.\n- **Net thesis:** AIXTRON is a real but second-order AI play. Its MOCVD tools make the EML/VCSEL laser epi behind AI optical transceivers. The 15 Oct Q3 prelim (orders ~EUR 275m vs ~EUR 214.6m consensus median, ~48% gross margin, ~31% EBIT margin) shows a genuine cycle turn off a trough. But FY26 guidance is only flat on FY25, the AI share (35-50%) is an analyst estimate, and the stock at ~67x 2026 and ~30x 2027 EPS already prices a good part of the recovery. The setup is positive on estimate revisions, but upside depends on 2027 earnings, and that depends on order conversion and on whether AI optics capex holds.\n- **Catalyst:** Full Q3 2026 statement confirmed the preliminary figures: orders about EUR275m, revenue about EUR184m, EBIT about EUR57m (31% margin), FY26 guidance unchanged (revenue about EUR560m, 17-20% EBIT margin). Preliminary numbers were released Oct 15, before the window. I could not retrieve the Oct 29 statement itself; this rests on a secondary report that the stock reacted calmly. (2026-10-29) — [source](https://www.boerse-express.com/news/articles/aixtron-aktie-hoffnungsschimmer-nach-zahlen-837140)\n- **AI-infra rev share (first read):** Not disclosed. First read: roughly 40-60% of orders now tied to AI optical lasers (estimate, low confidence). The rest is power electronics and LEDs.\n- **Key risk:** The Q3 order spike proves to be lumpy and cyclical. Orders push out or are cancelled, or AI optics and hyperscaler capex wobbles. A high-beta stock on a ~30x 2027 multiple would then de-rate. The Q3 margin is mix-driven and guidance implies a Q4 fall-back. Customer concentration, competition from Veeco and Chinese MOCVD makers, and the repeated SiC and Micro-LED disappointments add to this.\n\n## Changes — already-scored names (old → new)\n\n| Ticker | Layer | Composite | Verdict | Rank | Driver |\n|---|--:|---|---|---|---|\n| **NOW** | 11 | 82.6→**84.8** | fairly valued | 12→7 | Q3 beat on all metrics, AI ACV target raised to $1.7B (from $1B at start of year), FCF margin to 36%, capex cut: confirms AI monetization is real and accelerating inside the enterprise workflow base. ([src](https://www.sec.gov/Archives/edgar/data/0001373715/000137371526000092/erq3fy26.htm)) |\n| **005930.KS** | 5 | 83.8→**82** | fairly valued | 7→12 | Q3 chip profit reportedly ~0.22T won (about 0.2%) under consensus on a record 107.4T won total OP; HBM4E NVIDIA qualification is unverified, and the ~5% SNDK/MU dip reads as sentiment, not fundamenta… ([src](https://tech-insider.org/samsung-q3-2026-chip-profit-miss-107-44-trillion-won-ai-hbm4/)) |\n| **AMZN** | 8 | 78.8→**81.8** | fairly valued | 25→13 | AWS +39.3% y/y (6th straight acceleration), backlog $578B vs $496B, >40% growth guided for 2027-28, but 2026 capex ~$220B rising in 2027 and EPS missed; read-through is strong demand for cloud and co… ([src](https://www.geekwire.com/2026/aws-growth-hits-39-its-fastest-in-nearly-five-years-as-amazon-misses-on-earnings/)) |\n| **GEV** | 1 | 78.8→**80.6** | fairly valued | 24→19 | Q3'26: orders ~$29.3B (+96% organic), backlog $197B heading above $200B, FY26 guide raised (rev ~$46.5-47.5B, FCF ~$16-17B), plus ~$9.0B Trench Group deal; read-through is more visible multi-year gri… ([src](https://www.sec.gov/Archives/edgar/data/0001996810/000199681026000162/gevpressrelease3q26.htm)) |\n| **VRT** | 2 | 75→**79.2** | fairly valued | 45→26 | Q3 2026: sales $4.313B (+61%, +55% organic), adj EPS $2.21 (+78%), organic orders >100%, FY26 guide raised $650M to $14.65B midpoint and EPS to $7.15; read-through is accelerating datacenter power/co… ([src](https://investors.vertiv.com/news/news-details/2026/Vertiv-Reports-Strong-Third-Quarter-2026-with-Net-Sales-Growth-of-61-Organic-Orders-Growth-over-100-and-Diluted-EPS-Growth-of-91-Adjusted-Diluted-EPS-Growth-of-78-Raises-Full-Year-2026-Guidance-Across-All-Key-Metrics/)) |\n| **MSFT** | 8 | 75.8→**78** | underappreciated | 40→32 | FQ1'27 Azure +48% y/y ($33.2B) beat ~45% expectations with +49-50% cc guide; capex ~$6B below forecast on GPU supply delays, set to rise in 1H27, so demand exceeds supply and the capex delay is timin… ([src](https://investinglive.com/stocks/microsoft-q1-beats-as-azure-grows-48-and-capex-lands-6bn-below-forecast/)) |\n| **GOOGL** | 9 | 74.6→**77.4** | fairly valued | 50→37 | Q3 Cloud $30.7B (+103% y/y), total revenue $127.6B (+25%), Cloud margin about 36% per secondary sources; the market punished the reported 2027 capex above $300B (stock about -10%), so the read-throug… ([src](https://convergedigest.com/alphabet-q3-2026-google-cloud-ai-infrastructure-revenue/)) |\n| **KLAC** | 3 | 75.8→**75.8** | priced-in | 39→42 | FQ1'27 beat (rev $4.14B vs $4.0B mid, non-GAAP EPS $1.22 vs $1.16, FCF $1.34B) with CEO citing 2H CY26 acceleration; confirms process-control demand but Dec-qtr guide not retrieved, so no re-rating. ([src](https://finviz.com/news/410498/kla-corporation-reports-fiscal-2027-first-quarter-results)) |\n| **SNDK** | 5 | 73→**71.2** | fairly valued | 55→64 | FQ1'27 reported after close 10/29 (guide rev $10.3-10.8B, EPS $44-46); actuals not confirmed in searches, shares slid ~5% pre-print on the Samsung miss, and the repeated pattern of beat-then-sell-off… ([src](https://247wallst.com/investing/2026/10/29/sandisk-and-micron-slide-5-as-samsung-miss-cools-memory-rally-ahead-of-sandisk-earnings-sk-hynix-falls-3-western-digital-dips/)) |\n| **STX** | 5 | 68.8→**71.2** | fairly valued | 71→65 | FQ1'27 beat (rev $4.23B, adj EPS $7.68 vs ~$7.40, GM 57.8%) with FQ2 guide $4.8B/EPS $9.20 above consensus; shares slipped, so strong HAMR/Mozaic operating leverage is already largely priced in. ([src](https://247wallst.com/investing/2026/10/28/sk-hynix-jumps-7-micron-rises-3-on-memory-shortage-call-through-2030-while-seagate-slips-despite-upbeat-guidance/)) |\n\n## Follow-ups / watch (no score change yet)\n\n- **PWR** (Datacenter Buildout) — Q3 2026 revenue $12.01B vs $7.63B (+57%) and adj EPS $6.06 vs $3.33 (+82%), citing utility and data-center demand plus acquisitions; backlog and guidance not verified (sec.gov blocked), so read-through is a confirmation…\n- **000660.KS** (Memory & Storage) — Q3 2026 confirmed: revenue ~104.6T won, op profit ~83.3T (~80% margin, beat ~77T), DRAM/HBM booked through 2029 via LTAs with 14 customers, ~100T won payout; read-through is multi-year visibility, but net profit missed …\n\n## Refreshed top-20 (merged universe)\n\n| # | Ticker | Layer | Score | Return | Verdict |\n|--:|---|--:|--:|---|---|\n| 1 | **MU** | 5 | 94.6 | 🟢 high | underappreciated |\n| 2 | **000660.KS** | 5 | 90 | 🟢 high | underappreciated |\n| 3 | **DLR** | 8 | 89.2 | 🟡 med | underappreciated |\n| 4 | **AVGO** | 4 | 89 | 🟡 med | underappreciated |\n| 5 | **NVDA** | 4 | 88.8 | 🟢 high | fairly valued |\n| 6 | **TSM** | 3 | 88.6 | 🟡 med | fairly valued |\n| 7 | **NOW** | 11 | 84.8 | 🟡 med | fairly valued |\n| 8 | **AMD** | 4 | 83.2 | 🟢 high | fairly valued |\n| 9 | **AMAT** | 3 | 83 | 🟡 med | priced-in |\n| 10 | **CEG** | 1 | 83 | 🟡 med | fairly valued |\n| 11 | **TER** | 3 | 82.6 | 🟢 high | underappreciated |\n| 12 | **005930** | 5 | 82 | 🟡 med | fairly valued |\n| 13 | **AMZN** | 9 | 81.8 | 🟡 med | fairly valued |\n| 14 | **LITE** | 6 | 81.3 | 🟢 high | underappreciated |\n| 15 | **APH** | 6 | 80.8 | 🟡 med | underappreciated |\n| 16 | **MRVL** | 4 | 80.8 | 🔴 low | priced-in |\n| 17 | **ANET** | 6 | 80.6 | 🟢 high | fairly valued |\n| 18 | **DINF** | 10 | 80.6 | 🟢 high | underappreciated |\n| 19 | **GEV** | 1 | 80.6 | 🟡 med | fairly valued |\n| 20 | **ALAB** | 6 | 80.4 | 🟡 med | fairly valued |\n\n*Dry layers (no new names / material updates): 4, 10.*\n\n---\n*Updated baseline written: ai_value_chain_baseline_2026-10-30.json (191 companies, 165 ranked).*\n",
+  "driveFiles": [
+    "ai_value_chain_baseline_2026-10-30.json",
+    "weekly_report_2026-10-30.md"
+  ]
+}
